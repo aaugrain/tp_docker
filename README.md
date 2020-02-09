@@ -52,7 +52,7 @@ Cet exercice étudie plus en détail le comportement d'un processus dans un cont
     docker exec
     ```
 
-    Que voyez-vous comme invite de commande (PS1)? Est-ce celle de votre machine ou du namespace du conteneur? 
+    Que voyez-vous comme invite de commande (PS1)? Est-ce celle de votre machine ou du namespace du conteneur?
     2. Chercher le fichier index.html dans le répertoire
 
     ```bash
