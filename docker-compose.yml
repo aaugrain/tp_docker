@@ -1,0 +1,30 @@
+version: '3'
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    ports:
+      - "8080:8080"
+    volumes:
+      - jenkins_home:/var/jenkins_home
+  gitlab:
+    image: gitlab/gitlab-ce
+    ports:
+     - "80:80"
+     - "443:443"
+     - "2224:22"
+    volumes:
+     - gitlab_config:/etc/gitlab
+     - gitlab_logs:/var/log/gitlab
+     - gitlab_data:/var/opt/gitlab
+  nexus:
+    image: sonatype/nexus3
+    ports:
+     - "8081:8081"
+    volumes:
+     - nexus_data:/nexus-data
+volumes:
+ jenkins_home:
+ gitlab_config:
+ gitlab_logs:
+ gitlab_data:
+ nexus_data:
